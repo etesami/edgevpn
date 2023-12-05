@@ -22,11 +22,11 @@ import (
 	"time"
 
 	"github.com/ipfs/go-log"
-	. "github.com/mudler/edgevpn/api"
-	client "github.com/mudler/edgevpn/api/client"
-	"github.com/mudler/edgevpn/pkg/blockchain"
-	"github.com/mudler/edgevpn/pkg/logger"
-	"github.com/mudler/edgevpn/pkg/node"
+	. "edgevpn/api"
+	client "edgevpn/api/client"
+	"edgevpn/pkg/blockchain"
+	"edgevpn/pkg/logger"
+	"edgevpn/pkg/node"
 	. "github.com/onsi/ginkgo/v2"
 	. "github.com/onsi/gomega"
 )

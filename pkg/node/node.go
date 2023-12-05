@@ -25,12 +25,12 @@ import (
 	"github.com/libp2p/go-libp2p/core/network"
 	"github.com/libp2p/go-libp2p/p2p/net/conngater"
 
-	"github.com/mudler/edgevpn/pkg/crypto"
-	protocol "github.com/mudler/edgevpn/pkg/protocol"
+	"edgevpn/pkg/crypto"
+	protocol "edgevpn/pkg/protocol"
 
-	"github.com/mudler/edgevpn/pkg/blockchain"
-	hub "github.com/mudler/edgevpn/pkg/hub"
-	"github.com/mudler/edgevpn/pkg/logger"
+	"edgevpn/pkg/blockchain"
+	hub "edgevpn/pkg/hub"
+	"edgevpn/pkg/logger"
 )
 
 type Node struct {
@@ -128,6 +128,10 @@ func (e *Node) Start(ctx context.Context) error {
 
 	// Start eventual declared NetworkServices
 	for _, s := range e.config.NetworkServices {
+		e.config.Logger.Debug("Starting network service")
+		// funcType := reflect.TypeOf(s)
+		// e.config.Logger.Debug("Function name:", funcType.Name())
+		// e.config.Logger.Debug("Function type:", funcType)
 		err := s(ctx, e.config, e, ledger)
 		if err != nil {
 			return fmt.Errorf("error while starting network service: '%w'", err)

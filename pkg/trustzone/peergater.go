@@ -19,9 +19,9 @@ import (
 	"time"
 
 	"github.com/libp2p/go-libp2p/core/peer"
-	"github.com/mudler/edgevpn/pkg/blockchain"
-	"github.com/mudler/edgevpn/pkg/node"
-	"github.com/mudler/edgevpn/pkg/protocol"
+	"edgevpn/pkg/blockchain"
+	"edgevpn/pkg/node"
+	"edgevpn/pkg/protocol"
 )
 
 type PeerGater struct {

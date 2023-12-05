@@ -23,7 +23,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/mudler/edgevpn/pkg/crypto"
+	"edgevpn/pkg/crypto"
 
 	pubsub "github.com/libp2p/go-libp2p-pubsub"
 	"github.com/libp2p/go-libp2p/core/host"

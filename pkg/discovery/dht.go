@@ -19,8 +19,8 @@ import (
 	"sync"
 	"time"
 
-	internalCrypto "github.com/mudler/edgevpn/pkg/crypto"
-	"github.com/mudler/edgevpn/pkg/utils"
+	internalCrypto "edgevpn/pkg/crypto"
+	"edgevpn/pkg/utils"
 
 	"github.com/ipfs/go-log"
 	"github.com/libp2p/go-libp2p"
@@ -164,6 +164,7 @@ func (d *DHT) FindClosePeers(ll log.StandardLogger, onlyStaticRelays bool, stati
 			if !onlyStaticRelays {
 				closestPeers, err := d.GetClosestPeers(ctx, d.PeerID().String())
 				if err != nil {
+					ll.Debugf("CLOSING CHANNEL: %s", err)
 					close(peerChan)
 				}
 
@@ -172,7 +173,7 @@ func (d *DHT) FindClosePeers(ll log.StandardLogger, onlyStaticRelays bool, stati
 					if len(addrs) == 0 {
 						continue
 					}
-					ll.Debugf("[relay discovery] Found close peer '%s'", p.Pretty())
+					ll.Debugf("[relay discovery] Found close peer '%s'", p.String())
 					toStream = append(toStream, peer.AddrInfo{ID: p, Addrs: addrs})
 				}
 			}

@@ -22,13 +22,13 @@ import (
 	"time"
 
 	"github.com/ipfs/go-log"
-	"github.com/mudler/edgevpn/pkg/node"
-	"github.com/mudler/edgevpn/pkg/protocol"
+	"edgevpn/pkg/node"
+	"edgevpn/pkg/protocol"
 
 	"github.com/libp2p/go-libp2p/core/network"
 	"github.com/libp2p/go-libp2p/core/peer"
-	"github.com/mudler/edgevpn/pkg/blockchain"
-	"github.com/mudler/edgevpn/pkg/types"
+	"edgevpn/pkg/blockchain"
+	"edgevpn/pkg/types"
 	"github.com/pkg/errors"
 )
 

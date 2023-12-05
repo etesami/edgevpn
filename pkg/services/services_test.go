@@ -23,10 +23,10 @@ import (
 	. "github.com/onsi/ginkgo/v2"
 	. "github.com/onsi/gomega"
 
-	"github.com/mudler/edgevpn/pkg/blockchain"
-	"github.com/mudler/edgevpn/pkg/logger"
-	node "github.com/mudler/edgevpn/pkg/node"
-	. "github.com/mudler/edgevpn/pkg/services"
+	"edgevpn/pkg/blockchain"
+	"edgevpn/pkg/logger"
+	node "edgevpn/pkg/node"
+	. "edgevpn/pkg/services"
 )
 
 func get(url string) string {

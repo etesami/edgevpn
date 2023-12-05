@@ -18,10 +18,10 @@ import (
 	"time"
 
 	"github.com/ipfs/go-log"
-	"github.com/mudler/edgevpn/pkg/blockchain"
-	"github.com/mudler/edgevpn/pkg/hub"
-	"github.com/mudler/edgevpn/pkg/node"
-	"github.com/mudler/edgevpn/pkg/protocol"
+	"edgevpn/pkg/blockchain"
+	"edgevpn/pkg/hub"
+	"edgevpn/pkg/node"
+	"edgevpn/pkg/protocol"
 )
 
 // PeerGuardian provides auth for peers from blockchain data

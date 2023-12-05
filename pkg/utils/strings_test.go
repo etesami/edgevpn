@@ -17,7 +17,7 @@ import (
 	. "github.com/onsi/ginkgo/v2"
 	. "github.com/onsi/gomega"
 
-	. "github.com/mudler/edgevpn/pkg/utils"
+	. "edgevpn/pkg/utils"
 )
 
 var _ = Describe("String utilities", func() {

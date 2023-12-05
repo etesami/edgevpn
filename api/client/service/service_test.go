@@ -16,11 +16,11 @@ package service_test
 import (
 	"time"
 
-	client "github.com/mudler/edgevpn/api/client"
+	client "edgevpn/api/client"
 	. "github.com/onsi/ginkgo/v2"
 	. "github.com/onsi/gomega"
 
-	. "github.com/mudler/edgevpn/api/client/service"
+	. "edgevpn/api/client/service"
 )
 
 var _ = Describe("Service", func() {

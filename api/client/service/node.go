@@ -31,8 +31,8 @@ import (
 	"github.com/ipfs/go-log"
 	"gopkg.in/yaml.v2"
 
-	edgeVPNClient "github.com/mudler/edgevpn/api/client"
-	edgevpn "github.com/mudler/edgevpn/pkg/node"
+	edgeVPNClient "edgevpn/api/client"
+	edgevpn "edgevpn/pkg/node"
 )
 
 // Node is the service Node.

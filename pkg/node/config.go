@@ -23,10 +23,10 @@ import (
 	"github.com/libp2p/go-libp2p/core/network"
 	"github.com/libp2p/go-libp2p/core/peer"
 
-	"github.com/mudler/edgevpn/pkg/blockchain"
-	discovery "github.com/mudler/edgevpn/pkg/discovery"
-	hub "github.com/mudler/edgevpn/pkg/hub"
-	protocol "github.com/mudler/edgevpn/pkg/protocol"
+	"edgevpn/pkg/blockchain"
+	discovery "edgevpn/pkg/discovery"
+	hub "edgevpn/pkg/hub"
+	protocol "edgevpn/pkg/protocol"
 )
 
 // Config is the node configuration

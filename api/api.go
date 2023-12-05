@@ -33,13 +33,13 @@ import (
 	p2pprotocol "github.com/libp2p/go-libp2p/core/protocol"
 
 	"github.com/miekg/dns"
-	apiTypes "github.com/mudler/edgevpn/api/types"
+	apiTypes "edgevpn/api/types"
 
 	"github.com/labstack/echo/v4"
-	"github.com/mudler/edgevpn/pkg/node"
-	"github.com/mudler/edgevpn/pkg/protocol"
-	"github.com/mudler/edgevpn/pkg/services"
-	"github.com/mudler/edgevpn/pkg/types"
+	"edgevpn/pkg/node"
+	"edgevpn/pkg/protocol"
+	"edgevpn/pkg/services"
+	"edgevpn/pkg/types"
 )
 
 //go:embed public

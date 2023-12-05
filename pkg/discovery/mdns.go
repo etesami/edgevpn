@@ -41,7 +41,7 @@ func (n *discoveryNotifee) HandlePeerFound(pi peer.AddrInfo) {
 	//n.c.Infof("mDNS: discovered new peer %s\n", pi.ID.Pretty())
 	err := n.h.Connect(context.Background(), pi)
 	if err != nil {
-		n.c.Debugf("mDNS: error connecting to peer %s: %s\n", pi.ID.Pretty(), err)
+		n.c.Debugf("mDNS: error connecting to peer %s: %s\n", pi.ID.String(), err)
 	}
 }
 

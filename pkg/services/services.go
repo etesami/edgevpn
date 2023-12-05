@@ -24,16 +24,17 @@ import (
 	"github.com/ipfs/go-log"
 	"github.com/libp2p/go-libp2p/core/network"
 	"github.com/libp2p/go-libp2p/core/peer"
-	"github.com/mudler/edgevpn/pkg/blockchain"
-	"github.com/mudler/edgevpn/pkg/node"
-	protocol "github.com/mudler/edgevpn/pkg/protocol"
+	"edgevpn/pkg/blockchain"
+	"edgevpn/pkg/node"
+	protocol "edgevpn/pkg/protocol"
 	"github.com/pkg/errors"
 
-	"github.com/mudler/edgevpn/pkg/types"
+	"edgevpn/pkg/types"
 )
 
 func ExposeNetworkService(announcetime time.Duration, serviceID string) node.NetworkService {
 	return func(ctx context.Context, c node.Config, n *node.Node, b *blockchain.Ledger) error {
+		c.Logger.Debug("Starting Expose Network Service")
 		b.Announce(
 			ctx,
 			announcetime,

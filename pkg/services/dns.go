@@ -24,15 +24,16 @@ import (
 	lru "github.com/hashicorp/golang-lru"
 	"github.com/ipfs/go-log"
 	"github.com/miekg/dns"
-	"github.com/mudler/edgevpn/pkg/blockchain"
-	"github.com/mudler/edgevpn/pkg/node"
-	"github.com/mudler/edgevpn/pkg/protocol"
-	"github.com/mudler/edgevpn/pkg/types"
+	"edgevpn/pkg/blockchain"
+	"edgevpn/pkg/node"
+	"edgevpn/pkg/protocol"
+	"edgevpn/pkg/types"
 	"github.com/pkg/errors"
 )
 
 func DNSNetworkService(ll log.StandardLogger, listenAddr string, forwarder bool, forward []string, cacheSize int) node.NetworkService {
 	return func(ctx context.Context, c node.Config, n *node.Node, b *blockchain.Ledger) error {
+		c.Logger.Debug("Starting DNS Network Service")
 		server := &dns.Server{Addr: listenAddr, Net: "udp"}
 		cache, err := lru.New(cacheSize)
 		if err != nil {

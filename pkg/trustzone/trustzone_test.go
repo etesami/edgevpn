@@ -24,13 +24,13 @@ import (
 	. "github.com/onsi/ginkgo/v2"
 	. "github.com/onsi/gomega"
 
-	"github.com/mudler/edgevpn/pkg/blockchain"
-	"github.com/mudler/edgevpn/pkg/logger"
-	node "github.com/mudler/edgevpn/pkg/node"
-	"github.com/mudler/edgevpn/pkg/protocol"
-	"github.com/mudler/edgevpn/pkg/trustzone"
-	. "github.com/mudler/edgevpn/pkg/trustzone"
-	. "github.com/mudler/edgevpn/pkg/trustzone/authprovider/ecdsa"
+	"edgevpn/pkg/blockchain"
+	"edgevpn/pkg/logger"
+	node "edgevpn/pkg/node"
+	"edgevpn/pkg/protocol"
+	"edgevpn/pkg/trustzone"
+	. "edgevpn/pkg/trustzone"
+	. "edgevpn/pkg/trustzone/authprovider/ecdsa"
 )
 
 var _ = Describe("trustzone", func() {

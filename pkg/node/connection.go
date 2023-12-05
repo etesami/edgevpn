@@ -21,14 +21,14 @@ import (
 	mrand "math/rand"
 	"net"
 
-	internalCrypto "github.com/mudler/edgevpn/pkg/crypto"
+	internalCrypto "edgevpn/pkg/crypto"
 
 	"github.com/libp2p/go-libp2p"
 	"github.com/libp2p/go-libp2p/core/crypto"
 	"github.com/libp2p/go-libp2p/core/host"
 	"github.com/libp2p/go-libp2p/core/peer"
 	conngater "github.com/libp2p/go-libp2p/p2p/net/conngater"
-	hub "github.com/mudler/edgevpn/pkg/hub"
+	hub "edgevpn/pkg/hub"
 	multiaddr "github.com/multiformats/go-multiaddr"
 )
 

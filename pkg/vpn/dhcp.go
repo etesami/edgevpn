@@ -24,14 +24,14 @@ import (
 	"time"
 
 	"github.com/ipfs/go-log/v2"
-	"github.com/mudler/edgevpn/pkg/crypto"
-	"github.com/mudler/edgevpn/pkg/node"
-	"github.com/mudler/edgevpn/pkg/protocol"
-	"github.com/mudler/edgevpn/pkg/services"
-	"github.com/mudler/edgevpn/pkg/types"
-	"github.com/mudler/edgevpn/pkg/utils"
+	"edgevpn/pkg/crypto"
+	"edgevpn/pkg/node"
+	"edgevpn/pkg/protocol"
+	"edgevpn/pkg/services"
+	"edgevpn/pkg/types"
+	"edgevpn/pkg/utils"
 
-	"github.com/mudler/edgevpn/pkg/blockchain"
+	"edgevpn/pkg/blockchain"
 )
 
 func checkDHCPLease(c node.Config, leasedir string) string {
@@ -57,6 +57,7 @@ func contains(slice []string, elem string) bool {
 // DHCPNetworkService returns a DHCP network service
 func DHCPNetworkService(ip chan string, l log.StandardLogger, maxTime time.Duration, leasedir string, address string) node.NetworkService {
 	return func(ctx context.Context, c node.Config, n *node.Node, b *blockchain.Ledger) error {
+		l.Debug("Starting DHCP Network Service")
 		os.MkdirAll(leasedir, 0600)
 
 		// retrieve lease if present

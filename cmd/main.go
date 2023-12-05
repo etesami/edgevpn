@@ -25,11 +25,11 @@ import (
 	"github.com/libp2p/go-libp2p/core/metrics"
 	"github.com/libp2p/go-libp2p/core/network"
 
-	"github.com/mudler/edgevpn/api"
-	"github.com/mudler/edgevpn/pkg/node"
-	edgevpn "github.com/mudler/edgevpn/pkg/node"
-	"github.com/mudler/edgevpn/pkg/services"
-	"github.com/mudler/edgevpn/pkg/vpn"
+	"edgevpn/api"
+	"edgevpn/pkg/node"
+	edgevpn "edgevpn/pkg/node"
+	"edgevpn/pkg/services"
+	"edgevpn/pkg/vpn"
 	"github.com/urfave/cli"
 )
 

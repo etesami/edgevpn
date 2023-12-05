@@ -23,11 +23,11 @@ import (
 	. "github.com/onsi/ginkgo/v2"
 	. "github.com/onsi/gomega"
 
-	"github.com/mudler/edgevpn/pkg/blockchain"
-	"github.com/mudler/edgevpn/pkg/logger"
-	node "github.com/mudler/edgevpn/pkg/node"
-	. "github.com/mudler/edgevpn/pkg/services"
-	"github.com/mudler/edgevpn/pkg/types"
+	"edgevpn/pkg/blockchain"
+	"edgevpn/pkg/logger"
+	node "edgevpn/pkg/node"
+	. "edgevpn/pkg/services"
+	"edgevpn/pkg/types"
 )
 
 var _ = Describe("DNS service", func() {

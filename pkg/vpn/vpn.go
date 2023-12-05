@@ -29,13 +29,13 @@ import (
 
 	"github.com/google/gopacket"
 	"github.com/google/gopacket/layers"
-	"github.com/mudler/edgevpn/internal"
-	"github.com/mudler/edgevpn/pkg/blockchain"
-	"github.com/mudler/edgevpn/pkg/logger"
-	"github.com/mudler/edgevpn/pkg/node"
-	"github.com/mudler/edgevpn/pkg/protocol"
-	"github.com/mudler/edgevpn/pkg/stream"
-	"github.com/mudler/edgevpn/pkg/types"
+	"edgevpn/internal"
+	"edgevpn/pkg/blockchain"
+	"edgevpn/pkg/logger"
+	"edgevpn/pkg/node"
+	"edgevpn/pkg/protocol"
+	"edgevpn/pkg/stream"
+	"edgevpn/pkg/types"
 
 	"github.com/mudler/water"
 	"github.com/pkg/errors"
@@ -51,6 +51,7 @@ type streamManager interface {
 
 func VPNNetworkService(p ...Option) node.NetworkService {
 	return func(ctx context.Context, nc node.Config, n *node.Node, b *blockchain.Ledger) error {
+		nc.Logger.Debug("Starting VPN Network Service")
 		c := &Config{
 			Concurrency:        1,
 			LedgerAnnounceTime: 5 * time.Second,

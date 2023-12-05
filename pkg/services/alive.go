@@ -19,15 +19,16 @@ import (
 	"context"
 	"time"
 
-	"github.com/mudler/edgevpn/pkg/node"
-	"github.com/mudler/edgevpn/pkg/protocol"
-	"github.com/mudler/edgevpn/pkg/utils"
+	"edgevpn/pkg/node"
+	"edgevpn/pkg/protocol"
+	"edgevpn/pkg/utils"
 
-	"github.com/mudler/edgevpn/pkg/blockchain"
+	"edgevpn/pkg/blockchain"
 )
 
 func AliveNetworkService(announcetime, scrubTime, maxtime time.Duration) node.NetworkService {
 	return func(ctx context.Context, c node.Config, n *node.Node, b *blockchain.Ledger) error {
+		c.Logger.Debug("Starting Alive service")
 		t := time.Now()
 		// By announcing periodically our service to the blockchain
 		b.Announce(

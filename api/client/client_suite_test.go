@@ -19,7 +19,7 @@ import (
 	"testing"
 	"time"
 
-	. "github.com/mudler/edgevpn/api/client"
+	. "edgevpn/api/client"
 
 	. "github.com/onsi/ginkgo/v2"
 	. "github.com/onsi/gomega"
